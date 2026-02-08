@@ -1,0 +1,73 @@
+How BitTorrent works (big picture only)
+Basic P2P architectures
+
+--- Networking fundamentals
+TCP vs UDP
+Ports, sockets
+NAT, firewalls
+Client–server vs peer-to-peer
+Latency, bandwidth, packet loss
+Connection lifecycle
+
+--- Concurrency & parallelism
+Threads vs goroutines
+Race conditions
+Deadlocks
+Backpressure
+Async I/O
+Fan-out / fan-in patterns
+
+--- File systems & storage
+File chunking
+Random access reads/writes
+Hashing large files
+Disk I/O vs memory
+File integrity
+
+--- Distributed systems concepts
+Nodes & peers
+Discovery
+Gossip
+Fault tolerance
+Partial failure
+Eventual consistency
+CAP theorem
+
+--- Hashing & data integrity
+Cryptographic hashes (SHA-1, SHA-256)
+Merkle trees (VERY important later)
+Chunk verification
+Content-addressed storage
+
+--- Serialization & wire protocols
+Binary vs text protocols
+Message framing
+Endianness
+Versioning
+-Formats to understand
+JSON (easy)
+Protobuf (important)
+Bencoding (BitTorrent-specific)
+
+--- Introducing Blockchain (Later, not first)
+Concepts
+Public/private keys
+Signatures
+Merkle trees (again!)
+Consensus (high level)
+Smart contracts
+Gas & fees
+
+--- Go-friendly stacks
+Ethereum (geth, go-ethereum)
+Cosmos SDK
+Tendermint
+libp2p (HUGE for this project)
+
+Advanced Topics (Optional but Powerful)
+libp2p
+IPFS (study it, don’t clone it blindly)
+Kademlia DHT
+QUIC
+Rate control algorithms
+Observability (metrics, tracing)
