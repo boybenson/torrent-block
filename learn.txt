@@ -1,9 +1,9 @@
-How BitTorrent works (big picture only)
-Basic P2P architectures
+How BitTorrent works (big picture only) ✅
+Basic P2P architectures ✅
 
 --- Networking fundamentals
-TCP vs UDP
-Ports, sockets
+TCP vs UDP ✅
+Ports, sockets ✅
 NAT, firewalls
 Client–server vs peer-to-peer
 Latency, bandwidth, packet loss
