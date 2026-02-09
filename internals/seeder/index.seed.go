@@ -13,6 +13,7 @@ func SendFile(filePath, listenAddr string) error {
 	if err != nil {
 		return err
 	}
+
 	defer file.Close()
 
 	info, err := file.Stat()
@@ -24,6 +25,7 @@ func SendFile(filePath, listenAddr string) error {
 	if err != nil {
 		return err
 	}
+
 	defer ln.Close()
 
 	fmt.Println("Seeder listening on", listenAddr)
@@ -33,15 +35,12 @@ func SendFile(filePath, listenAddr string) error {
 	}
 	defer conn.Close()
 
-	// Send filename
 	filename := info.Name()
 	binary.Write(conn, binary.BigEndian, uint32(len(filename)))
 	conn.Write([]byte(filename))
 
-	// Send file size
 	binary.Write(conn, binary.BigEndian, uint64(info.Size()))
 
-	// Send file contents
 	written, err := io.Copy(conn, file)
 	if err != nil {
 		return err
